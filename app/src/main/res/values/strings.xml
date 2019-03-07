@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Firebase DB Sample</string>
+    <string name="id">ID :</string>
+    <string name="name">NAME :</string>
+    <string name="age">AGE :</string>
+    <string name="gender">GENDER :</string>
+    <string name="button">INSERT</string>
+</resources>
