@@ -2,11 +2,18 @@ package kr.kwonho87.firebasedbsample
 
 import com.google.firebase.database.Exclude
 
-class Data constructor(id: String, name: String, age: String, gender: String) {
-    var id: String = id
-    var name: String = name
-    var age: String = age
-    var gender: String = gender
+class Data {
+    lateinit var id: String
+    lateinit var name: String
+    lateinit var age: String
+    lateinit var gender: String
+
+    fun setData(id: String, name: String, age: String, gender: String) {
+        this.id = id
+        this.name = name
+        this.age = age
+        this.gender = gender
+    }
 
     @Exclude
     fun toMap(): Map<String, Any>  {
@@ -17,5 +24,4 @@ class Data constructor(id: String, name: String, age: String, gender: String) {
         result["gender"] = gender
         return result
     }
-
 }
