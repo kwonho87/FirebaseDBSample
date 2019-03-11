@@ -6,7 +6,7 @@ import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MyViewHolder constructor(itemView: View): RecyclerView.ViewHolder(itemView) {
     var tvId = itemView.tvId!!
-    var tvName = itemView.tvName
-    var tvAge = itemView.tvAge
-    var tvGender = itemView.tvGender
+    var tvName = itemView.tvName!!
+    var tvAge = itemView.tvAge!!
+    var tvGender = itemView.tvGender!!
 }

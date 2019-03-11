@@ -10,17 +10,20 @@
             android:textSize="12sp"
             android:text="@string/id"
             android:layout_width="33dp"
-            android:layout_height="46dp"
+            android:layout_height="32dp"
             android:gravity="center"
+            android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
             android:id="@+id/tvId"
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_height="32dp"
             android:textSize="12sp"
             android:layout_marginStart="8dp"
+            android:gravity="center|left"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/id"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/id"/>
@@ -30,7 +33,8 @@
             android:textSize="12sp"
             android:text="@string/name"
             android:layout_width="wrap_content"
-            android:layout_height="46dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="32dp"
             android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/id"
             app:layout_constraintStart_toStartOf="@+id/id"/>
@@ -38,11 +42,54 @@
     <TextView
             android:id="@+id/tvName"
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_height="32dp"
             android:textSize="12sp"
             android:layout_marginStart="8dp"
+            android:gravity="center|left"
             app:layout_constraintStart_toEndOf="@+id/name"
             app:layout_constraintTop_toTopOf="@+id/name"
             app:layout_constraintBottom_toBottomOf="@+id/name"/>
+
+    <TextView
+            android:id="@+id/age"
+            android:textSize="12sp"
+            android:text="@string/age"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintStart_toStartOf="@+id/name"/>
+
+    <TextView
+            android:id="@+id/tvAge"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:gravity="center|left"
+            app:layout_constraintStart_toEndOf="@+id/age"
+            app:layout_constraintTop_toTopOf="@+id/age"
+            app:layout_constraintBottom_toBottomOf="@+id/age"/>
+
+    <TextView
+            android:id="@+id/gender"
+            android:textSize="12sp"
+            android:text="@string/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/age"
+            app:layout_constraintStart_toStartOf="@+id/age"/>
+
+    <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:gravity="center|left"
+            app:layout_constraintStart_toEndOf="@+id/gender"
+            app:layout_constraintTop_toTopOf="@+id/gender"
+            app:layout_constraintBottom_toBottomOf="@+id/gender"/>
 
 </android.support.constraint.ConstraintLayout>

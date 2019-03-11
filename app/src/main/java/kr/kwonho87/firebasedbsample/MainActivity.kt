@@ -11,6 +11,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_main.*
 import kr.kwonho87.firebasedbsample.widget.MyAdapter
+import android.support.v7.widget.DividerItemDecoration
+
 
 /**
  * kwonho87@gmail.com
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         listView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = myAdapter
+            addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         }
 
         // init RecycleView data
@@ -86,14 +89,12 @@ class MainActivity : AppCompatActivity() {
      */
     class ValueListener: ValueEventListener {
         override fun onDataChange(dataSnapShot: DataSnapshot) {
-            var list = ArrayList<String>()
+            var list = ArrayList<Data>()
             list.clear()
 
             for(postSnapshot in dataSnapShot.children) {
-                var key = postSnapshot.key
-
                 var get = postSnapshot.getValue(Data::class.java)
-                list.add(get?.id!!)
+                list.add(get!!)
             }
 
             myAdapter.setData(list)

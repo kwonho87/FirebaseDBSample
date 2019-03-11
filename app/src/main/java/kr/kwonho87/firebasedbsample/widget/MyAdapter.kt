@@ -4,13 +4,14 @@ import android.annotation.SuppressLint
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import kr.kwonho87.firebasedbsample.Data
 import kr.kwonho87.firebasedbsample.R
 
 class MyAdapter: RecyclerView.Adapter<MyViewHolder>() {
 
-    private var mDataList = ArrayList<String>()
+    private var mDataList = ArrayList<Data>()
 
-    fun setData(list: ArrayList<String>) {
+    fun setData(list: ArrayList<Data>) {
         this.mDataList = list
     }
 
@@ -21,7 +22,10 @@ class MyAdapter: RecyclerView.Adapter<MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.tvId.text = mDataList[position]
+        holder.tvId.text = mDataList[position].id
+        holder.tvName.text = mDataList[position].name
+        holder.tvAge.text = mDataList[position].age
+        holder.tvGender.text = mDataList[position].gender
     }
 
     override fun getItemCount(): Int {
